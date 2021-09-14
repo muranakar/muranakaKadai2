@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
     @IBOutlet private weak var num1TextField: UITextField!
     @IBOutlet private weak var num2TextField: UITextField!
     @IBOutlet private weak var selectSegmentedControl: UISegmentedControl!
@@ -26,7 +25,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var calculation: Float?
 
         switch selectSegmentedControl.selectedSegmentIndex {
-
         case 0:
             calculation = num1 + num2
 
@@ -45,7 +43,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         default:
             break
-
         }
 
         let calculationRound = round((calculation ?? 0)*10)/10
