@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         num2TextField.delegate = self
     }
 
-    @IBAction func calculation(_ sender: Any) {
+    @IBAction private func calculation(_ sender: Any) {
         let num1 = Float(num1TextField.text ?? "") ?? 0
         let num2 = Float(num2TextField.text ?? "") ?? 0
         var calculation: Float?
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             break
 
         }
-        
+
         let calculationRound = round((calculation ?? 0)*10)/10
         calculationLabel.text = String(calculationRound)
     }
